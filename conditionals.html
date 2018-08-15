@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div id="hello">
+      <input v-model="message">
+      <!-- v-if və v-show arasındakı fərq videoda var.-->
+      <p v-show="message == 'salam'">v-show {{message}}</p>
+      <p v-if="message == 'salam'">v-if {{message}}</p>
+      <p v-else-if="message == 'test'">v-else-if {{message}}</p>
+      <p v-else>v-else {{message}}</p>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+  var app = new Vue({
+    el: '#hello',
+    data: {
+      message: ''
+    }
+  })
+  </script>
+  </body>
+</html>
